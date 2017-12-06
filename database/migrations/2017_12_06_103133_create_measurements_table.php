@@ -15,6 +15,10 @@ class CreateMeasurementsTable extends Migration
     {
         Schema::create('measurements', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('variable');
+            $table->double('value');
+            $table->integer('measurement_id')->unsigned();
+            $table->foreign('measurement_id')->references('id')->on('evaluations');
             $table->timestamps();
         });
     }

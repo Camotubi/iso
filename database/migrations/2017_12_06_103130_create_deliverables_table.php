@@ -16,6 +16,8 @@ class CreateDeliverablesTable extends Migration
         Schema::create('deliverables', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
+            $table->integer('project_id')->unsigned();
+            $table->foreign('project_id')->references('id')->on('projects');
         });
     }
 
