@@ -16,6 +16,7 @@ class CreateSubcharacteristicsTable extends Migration
         Schema::create('subcharacteristics', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
+            $table->string('name');
         });
     }
 

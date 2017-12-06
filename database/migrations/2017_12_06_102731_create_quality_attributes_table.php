@@ -16,6 +16,7 @@ class CreateQualityAttributesTable extends Migration
         Schema::create('quality_attributes', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
+            $table->string('name');
         });
     }
 
