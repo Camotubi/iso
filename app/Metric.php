@@ -6,5 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Metric extends Model
 {
-    //
+    public function subcharacteristic()
+    {
+        return $this->belongsTo('App\Subcharacteristic');
+    }
+
+    public function deliverable()
+    {
+        return $this->belongsToMany('App\Deliverable','evaluations');
+    }
 }
