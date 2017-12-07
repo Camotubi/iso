@@ -6,6 +6,8 @@ use App\MetricDeliverable;
 use App\Deliverable;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Project;
+use App\Metric;
 
 class MetricDeliverableController extends Controller
 {
@@ -15,9 +17,9 @@ class MetricDeliverableController extends Controller
      * @param  \App\Deliverable  $deliverable
      * @return \Illuminate\Http\Response
      */
-    public function index(Deliverable $deliverable)
+    public function index(Project $project, Deliverable $deliverable)
     {
-        return view('project.deliverable.metricDeliverable.index', ['deliverable' => $deliverable,]);
+        return view('project.metricDeliverable.index', ['deliverable' => $deliverable]);
     }
 
     /**
@@ -26,14 +28,10 @@ class MetricDeliverableController extends Controller
      * @param  \App\Deliverable  $deliverable
      * @return \Illuminate\Http\Response
      */
-    public function create(Deliverable $deliverable)
+    public function create(Project $project, Deliverable $deliverable)
     {
-<<<<<<< HEAD
 
-        return view('project.deliverable.metricDeliverable.create', ['deliverable' => $deliverable, 'metric' => App\Metric::all()]);
-=======
-        view('project.metricDeliverable.create', ['metricas' => App\Metricas::all()];
->>>>>>> 945c24dec995dcf6dbbd45325b4280a327eea705
+        return view('project.metricDeliverable.create', ['deliverable' => $deliverable, 'metrics' => Metric::all(), 'project' => $project]);
     }
 
     /**
@@ -43,10 +41,11 @@ class MetricDeliverableController extends Controller
      * @param  \App\Deliverable  $deliverable
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, Deliverable $deliverable)
+    public function store(Request $request, Project $project, Deliverable $deliverable)
     {
-        $metricDeliverable = new MetricDeliverable;
-        $metricDeliverable->
+        $deliverable->metrics()->attach($request->input('metric'));
+        return redirect('/dashboard')->with(['success' => 'Metrica seleccionada']);
+
     }
 
     /**
@@ -56,7 +55,7 @@ class MetricDeliverableController extends Controller
      * @param  \App\MetricDeliverable  $metricDeliverable
      * @return \Illuminate\Http\Response
      */
-    public function show(Deliverable $deliverable, MetricDeliverable $metricDeliverable)
+    public function show(Project $project, Deliverable $deliverable, MetricDeliverable $metricDeliverable)
     {
         //
     }

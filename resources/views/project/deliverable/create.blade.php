@@ -9,7 +9,7 @@
             {{ csrf_field() }}
             <div class="form-group">
             <label>Nombre del Entregable:</label>
-            <input class = "form-control" name = "name" required>
+            <input class = "form-control" name = "name" required type="text">
             </div>
             <input class= "btn btn-primary" type = "submit" value = "Registrar Entregable">
         </div>
