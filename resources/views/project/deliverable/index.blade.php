@@ -4,7 +4,7 @@
 <table>
 			<tr>
 				<th>Codigo</th>
-				<th>Nombre del Proyecto</th>
+				<th>Nombre</th>
 				<th>Creado en</th>
 				<th>Actualizado en</th>
 			</tr>
