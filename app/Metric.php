@@ -13,6 +13,6 @@ class Metric extends Model
 
     public function deliverable()
     {
-        return $this->belongsToMany('App\Deliverable','evaluations');
+        return $this->belongsToMany('App\Deliverable','metric_deliverable')->withPivot('id');
     }
 }

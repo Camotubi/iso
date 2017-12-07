@@ -38,6 +38,7 @@ class ProjectController extends Controller
     {
         $project = new Project;
         $project->name = $request->input('name');
+        $project->save();
         return redirect('/dashboard')->with(['success' => 'Proyecto creado']);
     }
 
