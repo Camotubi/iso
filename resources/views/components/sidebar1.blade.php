@@ -27,7 +27,6 @@
 								<a class="nav-link" href="/metrics/create">Nueva</a>
 							</li>
 						</ul>
-					</li>
 				</div>
 			</li>
 		<ul>
