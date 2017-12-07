@@ -15,7 +15,7 @@ class DeliverableController extends Controller
      */
     public function index()
     {
-        $deliverables = Deriverable::all();
+        $deliverables = Deliverable::all();
         return view('project.deliverable.index', ['deliverables' => $deliverables]);
     }
 

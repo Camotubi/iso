@@ -47,9 +47,18 @@ class ProjectController extends Controller
      * @param  \App\Project  $project
      * @return \Illuminate\Http\Response
      */
-    public function show(Project $project)
+    public function show($id)
     {
-        //
+      $project = Project::find($id);
+      if(!is_null($project))
+      {
+        $deliverables = Deliverable::where('project_id', $id)->get();
+        return view('project.show', ['project' => $project, 'deliverables' => $deliverables]);
+      }
+      else
+      {
+        return redirect('project.index')->with('error' , 'Proyecto no Encontrado');
+      }
     }
 
     /**
