@@ -18,8 +18,8 @@ class CreateMetricsTable extends Migration
             $table->timestamps();
             $table->string('name');
             $table->string('formula');
-            $table->integer('subcharacteristics_id')->unsigned();
-            $table->foreign('subcharacteristics_id')->references('id')->on('subcharacteristics');
+            $table->integer('subcharacteristic_id')->unsigned();
+            $table->foreign('subcharacteristic_id')->references('id')->on('subcharacteristics');
         });
     }
 
