@@ -7,7 +7,6 @@ use App\Deliverable;
 use App\Project;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Project;
 use App\Metric;
 
 class MetricDeliverableController extends Controller
