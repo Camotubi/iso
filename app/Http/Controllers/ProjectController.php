@@ -14,7 +14,8 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        //
+        $projects = Project::all();
+        return view('project.index', ['projects' => $projects]);
     }
 
     /**
@@ -37,7 +38,6 @@ class ProjectController extends Controller
     {
         $project = new Project;
         $project->name = $request->input('name');
-        $project->save();
         return redirect('/dashboard')->with(['success' => 'Proyecto creado']);
     }
 

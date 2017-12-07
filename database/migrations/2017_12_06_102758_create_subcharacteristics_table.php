@@ -17,6 +17,8 @@ class CreateSubcharacteristicsTable extends Migration
             $table->increments('id');
             $table->timestamps();
             $table->string('name');
+            $table->integer('characteristics_id')->unsigned();
+            $table->foreign('characteristics_id')->references('id')->on('characteristics');
         });
     }
 

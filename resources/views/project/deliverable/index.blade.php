@@ -8,12 +8,12 @@
 				<th>Creado en</th>
 				<th>Actualizado en</th>
 			</tr>
-		@foreach($projects as $project)
+		@foreach($deliverables as $deliverable)
 			<tr>
-				<td>{{$project->id}}</td>
-				<td>{{$project->name}}</td>
-				<td>{{$project->created_at}}</td>
-				<td>{{$project->updated_at}}</td>
+				<td>{{$deliverable->id}}</td>
+				<td>{{$deliverable->name}}</td>
+				<td>{{$deliverable->created_at}}</td>
+				<td>{{$deliverable->updated_at}}</td>
 			</tr>
 		@endforeach
 		</table>
