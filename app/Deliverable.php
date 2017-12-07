@@ -14,7 +14,7 @@ class Deliverable extends Model
 
     public function metrics()
     {
-        return $this->belongsToMany('App\Metric','evaluations');
+        return $this->belongsToMany('App\Metric', 'metric_deliverable')->withPivot('id');
     }
 
 }
