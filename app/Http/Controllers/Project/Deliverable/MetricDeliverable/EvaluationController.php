@@ -30,10 +30,30 @@ class EvaluationController extends Controller
      * @param  \App\MetricDeliverable  $metricDeliverable
      * @return \Illuminate\Http\Response
      */
-    public function create(Project $project, Deliverable $deliverable, MetricDeliverable $metricDeliverable)
+    public function create(Project $project, Deliverable $deliverable, MetricDeliverable $metricDeliverable, Request $request)
     {
         $metric = Metric::find($metricDeliverable->metric_id);
-        return(view('project.deliverable.metricDeliverable.evaluation.create',['project'=>$project,'deliverable' => $deliverable,'metricDeliverable' => $metricDeliverable, 'metric' => $metric]));
+        $numVariables = $request->input('numVariables');
+    		if(is_null($numVariables))
+    	  {
+    		$numVariables = 2;
+    	  }
+    		$modVariablesFields = $request->input('modVariablesFields');
+    		if($modVariablesFields == 'p')
+    	  {
+    		$numVariables++;
+    	  }elseif($modVariablesFields == 'm')
+    	  {
+    		$numVariables--;
+    	  }
+        return(view('project.deliverable.metricDeliverable.evaluation.create',
+        [
+          'project'=>$project,'deliverable' => $deliverable,
+          'metricDeliverable' => $metricDeliverable,
+          'metric' => $metric,
+          'numVariables' => $numVariables,
+          'modVariablesFields' => $modVariablesFields
+        ]));
     }
 
     /**

@@ -2,7 +2,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1> Registro de Metrica</h1>
+    <h1> Registro de Métrica</h1>
     <form method="POST" action="/projects/{{$project->id}}/deliverables/{{$deliverable->id}}/metricDeliverables">
         <div class = "container">
             {{ csrf_field() }}
