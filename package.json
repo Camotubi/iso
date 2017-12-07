@@ -21,6 +21,7 @@
     "jquery": "^3.2.1",
     "laravel-vue-pagination": "^1.0.6",
     "popper.js": "^1.13.0",
-    "vue": "^2.1.10"
+    "vue": "^2.1.10",
+    "vue-chartjs": "^3.0.2"
   }
 }
