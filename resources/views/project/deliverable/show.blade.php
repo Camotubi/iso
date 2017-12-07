@@ -1,11 +1,13 @@
 
 @extends('layouts.app')
 @section('content')
-<br>
-<a href="/projects/{{$project->id}}/deliverables/{{$deliverable->id}}/metricDeliverables/create">Agregar Metrica a entregable</a>
+	<h1>{{$deliverable->name}}</h1>
+	<br>
+	<h3>Métricas</h3>
+	<br>
 <table>
 			<tr>
-				<th>Metrica</th>
+				<th>Métrica</th>
 				<th>Estado</th>
 			</tr>
             @foreach($deliverable->metrics()->get() as $metric)
@@ -16,5 +18,6 @@
 			</tr>
 		@endforeach
 		</table>
+		<a href="/projects/{{$project->id}}/deliverables/{{$deliverable->id}}/metricDeliverables/create" class="btn btn-primary button">Agregar Métrica</a>
 	</div>
 @endsection
