@@ -17,8 +17,8 @@ class CreateCharacteristicsTable extends Migration
             $table->increments('id');
             $table->timestamps();
             $table->string('name');
-            $table->integer('quality_attributes_id')->unsigned();
-            $table->foreign('quality_attributes_id')->references('id')->on('quality_attributes');
+            $table->integer('quality_attribute_id')->unsigned();
+            $table->foreign('quality_attribute_id')->references('id')->on('quality_attributes');
         });
     }
 
