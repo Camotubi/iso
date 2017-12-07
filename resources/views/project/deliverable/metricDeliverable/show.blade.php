@@ -3,6 +3,7 @@
     valor actual: {{$metricDeliverable->currentValue()}}
     historial :{{json_encode($metricDeliverable->valueHistory())}}
 
+    <a href="/projects/{{$project->id}}/deliverables/{{$deliverable->id}}/metricDeliverables/{{$metricDeliverable->id}}/evaluations/create">Agregar Evaluacion</a>
   <canvas id ="graph"></canvas>
   <script src="/js/Chart.min.js"></script>
   <script>

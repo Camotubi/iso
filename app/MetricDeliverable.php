@@ -24,21 +24,33 @@ class MetricDeliverable extends Pivot
 
     public function currentValue()
     {
-        $expression = $this->metric()->first()->formula;
-        $evaluation = $this->evaluations()->orderBy('created_at', 'desc')->first();
-        $measurements = $evaluation->measurements()->get();
-        foreach($measurements as  $measurement)
+        try{
+            $expression = $this->metric()->first()->formula;
+            $evaluation = $this->evaluations()->orderBy('created_at', 'desc')->first();
+            if(empty($evaluation))
+            {
+                return "Not set";
+            }
+            $measurements = $evaluation->measurements()->get();
+            foreach($measurements as  $measurement)
+            {
+                $expression = str_replace($measurement->variable,$measurement->value,$expression);
+            }
+            $calculator = new \NXP\MathExecutor();
+            
+            $ret= $calculator->execute($expression);
+            return $ret;
+        }catch(\Exception $e)
         {
-            $expression = str_replace($measurement->variable,$measurement->value,$expression);
+            return "error";
         }
-        $calculator = new \NXP\MathExecutor();
-        return $calculator->execute($expression);
-
 
     }
 
     public function valueHistory()
     {
+        try{
+
         $calculator = new \NXP\MathExecutor();
         $valueHistory = array();
         $expression = $this->metric()->first()->formula;
@@ -54,6 +66,10 @@ class MetricDeliverable extends Pivot
             array_push($valueHistory,$calculator->execute($expression));
         }
         return $valueHistory;
+        }catch(\Exception $e)
+        {
+            return "error";
+        }
 
     }
 }

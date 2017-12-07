@@ -2,6 +2,7 @@
 @extends('layouts.app')
 @section('content')
 <br>
+<a href="/projects/{{$project->id}}/deliverables/{{$deliverable->id}}/metricDeliverables/create">Agregar Metrica a entregable</a>
 <table>
 			<tr>
 				<th>Metrica</th>

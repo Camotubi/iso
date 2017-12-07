@@ -31,7 +31,8 @@ class MetricDeliverableController extends Controller
     public function create(Project $project, Deliverable $deliverable)
     {
 
-        return view('project.metricDeliverable.create', ['deliverable' => $deliverable, 'metrics' => Metric::all(), 'project' => $project]);
+        return view('project.deliverable.metricDeliverable.create', ['deliverable' => $deliverable, 
+            'metrics' => Metric::whereNotIn('id',$deliverable->metrics()->get()->pluck('id')->all())->get(), 'project' => $project]);
     }
 
     /**
@@ -57,7 +58,7 @@ class MetricDeliverableController extends Controller
      */
     public function show(Project $project, Deliverable $deliverable, MetricDeliverable $metricDeliverable)
     {
-        return view('project.deliverable.metricDeliverable.show',['project'=>$project,'metricDeliverable' => $metricDeliverable]);
+        return view('project.deliverable.metricDeliverable.show',['project'=>$project,'deliverable'=>$deliverable ,'metricDeliverable' => $metricDeliverable]);
     }
 
     /**

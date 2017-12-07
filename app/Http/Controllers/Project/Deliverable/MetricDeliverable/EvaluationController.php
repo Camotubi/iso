@@ -3,6 +3,9 @@
 namespace App\Http\Controllers\Project\Deliverable\MetricDeliverable;
 
 use App\Evaluation;
+use App\Project;
+use App\Measurement;
+use App\Deliverable;
 use App\MetricDeliverable;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -26,9 +29,10 @@ class EvaluationController extends Controller
      * @param  \App\MetricDeliverable  $metricDeliverable
      * @return \Illuminate\Http\Response
      */
-    public function create(MetricDeliverable $metricDeliverable)
+    public function create(Project $project, Deliverable $deliverable, MetricDeliverable $metricDeliverable)
     {
         //
+        return(view('project.deliverable.metricDeliverable.evaluation.create',['project'=>$project,'deliverable' => $deliverable,'metricDeliverable' => $metricDeliverable]));
     }
 
     /**
@@ -38,9 +42,25 @@ class EvaluationController extends Controller
      * @param  \App\MetricDeliverable  $metricDeliverable
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, MetricDeliverable $metricDeliverable)
+    public function store(Project $project, Deliverable $deliverable, Request $request, MetricDeliverable $metricDeliverable)
     {
-        //
+        $evaluation = new Evaluation;
+        $evaluation ->date = $request->input('date');
+        $evaluation -> metricDeliverable()->associate($metricDeliverable);
+        $evaluation->save();
+        $variables = $request->input('variable');
+        $values = $request->input('value');
+        $data = array();
+        foreach($variables as $key => $n ) {
+            if(!is_null($variables[$key]))
+            array_push($data,array('variable' => $variables[$key],'value'=>$values[$key],'evaluation_id' => $evaluation->id));
+        }
+        Measurement::insert($data);
+
+
+/*Load array */
+   
+        return redirect('/dashboard');
     }
 
     /**
