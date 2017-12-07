@@ -1,9 +1,18 @@
 @extends('layouts.app')
 @section('content')
     Valor actual: {{$metricDeliverable->currentValue()}}
-    Historial :{{json_encode($metricDeliverable->valueHistory())}}
-
-    <a href="/projects/{{$project->id}}/deliverables/{{$deliverable->id}}/metricDeliverables/{{$metricDeliverable->id}}/evaluations/create" class="btn btn-primary button2">Agregar Evaluacion</a>
+    <br>
+    @php
+      $aye = $metricDeliverable->valueHistory();
+    @endphp
+    Historial:
+    <ul>
+      @foreach ($aye as $yo)
+        <li>{{$yo}}</li>
+      @endforeach
+    </ul>
+    <br>
+  <a href="/projects/{{$project->id}}/deliverables/{{$deliverable->id}}/metricDeliverables/{{$metricDeliverable->id}}/evaluations/create" class="btn btn-primary button2">Agregar Evaluacion</a>
   <canvas id ="graph"></canvas>
   <script src="/js/Chart.min.js"></script>
   <script>

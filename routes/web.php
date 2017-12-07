@@ -14,7 +14,7 @@
 Route::get('ProjectController@index', function () {
     return view('dashboard');
 });
-
+Route::get('/', 'ProjectController@index');
 Route::get('/dashboard', 'ProjectController@index');
 Route::resources([
     'projects' => 'ProjectController',
