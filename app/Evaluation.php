@@ -20,4 +20,11 @@ class Evaluation extends Pivot
     {
         return $this->hasMany('App\Measurement');
     }
+
+    public function currentValue()
+    {
+        $this->
+        $calculator = new \NXP\MathExecutor();
+
+    }
 }

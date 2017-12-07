@@ -17,10 +17,8 @@ class CreateEvaluationsTable extends Migration
             $table->increments('id');
             $table->timestamps();
             $table->date('date');
-            $table->integer('metric_id')->unsigned();
-            $table->foreign('metric_id')->references('id')->on('metrics');
-            $table->integer('deliverable_id')->unsigned();
-            $table->foreign('deliverable_id')->references('id')->on('deliverables');
+            $table->integer('metric_deliverable_id')->unsigned();
+            $table->foreign('metric_deliverable_id')->references('id')->on('metric_deliverable');
         });
     }
 
