@@ -13,25 +13,25 @@ class MetricsTableSeeder extends Seeder
     public function run()
     {
       $metric = new Metric;
-      $metric->name = 'Functional adequacy';
+      $metric->name = 'Functional Adequacy';
       $metric->formula = '1-(A/B)';
       $metric->subcharacteristic()->associate(1);
       $metric->save();
 
       $metric = new Metric;
-      $metric->name = 'Functional implementation coverage';
+      $metric->name = 'Functional Implementation Coverage';
       $metric->formula = '1-(A/B)';
       $metric->subcharacteristic()->associate(1);
       $metric->save();
 
       $metric = new Metric;
-      $metric->name = 'Functional implementation completeness';
+      $metric->name = 'Functional Implementation Completeness';
       $metric->formula = '1-(A/B)';
       $metric->subcharacteristic()->associate(1);
       $metric->save();
 
       $metric = new Metric;
-      $metric->name = 'Functional specification stability';
+      $metric->name = 'Functional Specification Stability';
       $metric->formula = '1-(A/B)';
       $metric->subcharacteristic()->associate(1);
       $metric->save();
@@ -132,6 +132,6 @@ class MetricsTableSeeder extends Seeder
       $metric->subcharacteristic()->associate(1);
       $metric->save();
 
-      
+
     }
 }
