@@ -56,7 +56,7 @@ class DeliverableController extends Controller
      */
     public function show(Project $project, Deliverable $deliverable)
     {
-        //
+        return view('project.deliverable.show',['project'=>$project,'deliverable' => $deliverable]);
     }
 
     /**

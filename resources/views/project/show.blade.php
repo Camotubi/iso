@@ -11,9 +11,9 @@
 				<th>Creado en</th>
 				<th>Actualizado en</th>
 			</tr>
-		@foreach($deliverables as $deliverable)
+            @foreach($project->deliverables()->get() as $deliverable)
 			<tr>
-				<td>{{$deliverable->id}}</td>
+                <td><a href="/projects/{{$project->id}}/deliverables/{{$deliverable->id}}">{{$deliverable->id}}</a></td>
 				<td>{{$deliverable->name}}</td>
 				<td>{{$deliverable->created_at}}</td>
 				<td>{{$deliverable->updated_at}}</td>

@@ -15,4 +15,8 @@ class Metric extends Model
     {
         return $this->belongsToMany('App\Deliverable','metric_deliverable')->withPivot('id');
     }
+    public function metricDeliverables()
+    {
+        return $this->hasMany('App\MetricDeliverable')->get();
+    }
 }

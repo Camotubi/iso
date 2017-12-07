@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Project\Deliverable;
 
 use App\MetricDeliverable;
 use App\Deliverable;
+use App\Project;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -28,12 +29,8 @@ class MetricDeliverableController extends Controller
      */
     public function create(Deliverable $deliverable)
     {
-<<<<<<< HEAD
 
         return view('project.deliverable.metricDeliverable.create', ['deliverable' => $deliverable, 'metric' => App\Metric::all()]);
-=======
-        view('project.metricDeliverable.create', ['metricas' => App\Metricas::all()];
->>>>>>> 945c24dec995dcf6dbbd45325b4280a327eea705
     }
 
     /**
@@ -46,7 +43,7 @@ class MetricDeliverableController extends Controller
     public function store(Request $request, Deliverable $deliverable)
     {
         $metricDeliverable = new MetricDeliverable;
-        $metricDeliverable->
+        $metricDeliverable;
     }
 
     /**
@@ -56,9 +53,9 @@ class MetricDeliverableController extends Controller
      * @param  \App\MetricDeliverable  $metricDeliverable
      * @return \Illuminate\Http\Response
      */
-    public function show(Deliverable $deliverable, MetricDeliverable $metricDeliverable)
+    public function show(Project $project,Deliverable $deliverable, MetricDeliverable $metricDeliverable)
     {
-        //
+        return view('project.deliverable.metricDeliverable.show',['project'=>$project,'metricDeliverable' => $metricDeliverable]);
     }
 
     /**
