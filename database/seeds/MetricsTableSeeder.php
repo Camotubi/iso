@@ -37,13 +37,13 @@ class MetricsTableSeeder extends Seeder
       $metric->save();
 
       $metric = new Metric;
-      $metric->name = 'Data exchangeability (Data Formart Base)';
+      $metric->name = 'Data Exchangeability (Data Formart Base)';
       $metric->formula = 'A/B';
       $metric->subcharacteristic()->associate(1);
       $metric->save();
 
       $metric = new Metric;
-      $metric->name = 'Data exchangeability (Users success attemp based)';
+      $metric->name = 'Data Exchangeability (Users success attemp based)';
       $metric->formula = '1-(A/B)';
       $metric->subcharacteristic()->associate(1);
       $metric->save();
