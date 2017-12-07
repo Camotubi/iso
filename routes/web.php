@@ -19,6 +19,7 @@ Route::get('/dashboard', function() { return view('dashboard');});
 Route::resources([
     'projects' => 'ProjectController',
     'projects.deliverables' => 'Project\DeliverableController',
-
-
+    'projects.deliverables.metricDeliverables' => 'Project\Deliverable\MetricDeliverableController',
+    'projects.deliverables.metricDeliverables.evaluations' => 'Project\Deliverable\MetricDeliverable\EvaluationController',
+    'projects.deliverables.metricDeliverables.evaluation.measurements' => 'Project\Deliverable\MetricDeliverable\Evaluation\MeasurementController'
 ]);
