@@ -7,6 +7,7 @@ use App\Project;
 use App\Measurement;
 use App\Deliverable;
 use App\MetricDeliverable;
+use App\Metric;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -31,8 +32,8 @@ class EvaluationController extends Controller
      */
     public function create(Project $project, Deliverable $deliverable, MetricDeliverable $metricDeliverable)
     {
-        //
-        return(view('project.deliverable.metricDeliverable.evaluation.create',['project'=>$project,'deliverable' => $deliverable,'metricDeliverable' => $metricDeliverable]));
+        $metric = Metric::find($metricDeliverable->metric_id);
+        return(view('project.deliverable.metricDeliverable.evaluation.create',['project'=>$project,'deliverable' => $deliverable,'metricDeliverable' => $metricDeliverable, 'metric' => $metric]));
     }
 
     /**
@@ -59,7 +60,7 @@ class EvaluationController extends Controller
 
 
 /*Load array */
-   
+
         return redirect('/dashboard');
     }
 

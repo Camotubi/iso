@@ -6,11 +6,13 @@
             {{ csrf_field() }}
             <div class="form-group">
             <label>Fecha de la evaluación:</label>
-            <input class = "form-control" name = "date" type="date">
+            <input class = "form-control" name ="date" type="date">
             </div>
+            <p>Formula de la Métrica: {{$metric->formula}}</p>
+            <br>
             @for($i=0; $i<10;$i++)
-                <input type="text" name="variable[]">
-                <input type="number" name="value[]">
+                <input type="text" name="variable[]" class="form-control">
+                <input type="number" name="value[]" step="any" class="form-control">
             @endfor
             <input class= "btn btn-primary" type = "submit" value = "Registrar">
         </div>
