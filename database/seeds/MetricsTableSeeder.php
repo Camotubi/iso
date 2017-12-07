@@ -77,5 +77,17 @@ class MetricsTableSeeder extends Seeder
       $metric->formula = 'A/B';
       $metric->subcharacteristic()->associate(1);
       $metric->save();
+
+      $metric = new Metric;
+      $metric->name = 'Failure density against test cases';
+      $metric->formula = 'A/B';
+      $metric->subcharacteristic()->associate(1);
+      $metric->save();
+
+      $metric = new Metric;
+      $metric->name = 'Failure resolution';
+      $metric->formula = 'A/B';
+      $metric->subcharacteristic()->associate(1);
+      $metric->save();
     }
 }
