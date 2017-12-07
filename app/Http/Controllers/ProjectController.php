@@ -57,7 +57,7 @@ class ProjectController extends Controller
       }
       else
       {
-        return redirect('project.index')->with('error' , 'Proyecto no Encontrado');
+        return redirect('/dashboard')->with('error' , 'Proyecto no Encontrado');
       }
     }
 

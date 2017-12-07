@@ -20,6 +20,6 @@
 			</tr>
 		@endforeach
 		</table>
-		<a href="/projects/{{$project->id}}/deliverables/create" class="btn btn-primary">Crear nuevo entregable</a>
+		<a href="/projects/{{$project->id}}/deliverables/create" class="btn btn-primary button">Crear nuevo entregable</a>
 	</div>
 @endsection
