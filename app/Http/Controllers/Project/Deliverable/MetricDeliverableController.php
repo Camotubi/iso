@@ -17,7 +17,7 @@ class MetricDeliverableController extends Controller
      */
     public function index(Deliverable $deliverable)
     {
-        //
+        return view('project.deliverable.metricDeliverable.index', ['deliverable' => $deliverable,]);
     }
 
     /**
@@ -28,7 +28,8 @@ class MetricDeliverableController extends Controller
      */
     public function create(Deliverable $deliverable)
     {
-        //
+
+        return view('project.deliverable.metricDeliverable.create', ['deliverable' => $deliverable, 'metric' => App\Metric::all()]);
     }
 
     /**
@@ -40,7 +41,8 @@ class MetricDeliverableController extends Controller
      */
     public function store(Request $request, Deliverable $deliverable)
     {
-        //
+        $metricDeliverable = new MetricDeliverable;
+        $metricDeliverable->
     }
 
     /**
