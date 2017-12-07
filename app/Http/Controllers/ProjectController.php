@@ -24,7 +24,7 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        //
+        return view('project.create');
     }
 
     /**
@@ -35,7 +35,9 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $project = new Project;
+        $project->name = $request->input('name');
+        return redirect('/dashboard')->with(['success' => 'Proyecto creado']);
     }
 
     /**
