@@ -24,7 +24,7 @@ class MeasurementController extends Controller
      */
     public function create()
     {
-        //
+        return view('project.measurment.create');
     }
 
     /**
@@ -35,7 +35,9 @@ class MeasurementController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      $measurement = new Measurement;
+      $measurement->name = $request->input('name');
+      $measurement ->save()
     }
 
     /**
