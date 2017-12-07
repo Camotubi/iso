@@ -12,10 +12,10 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('dashboard');
 });
 
-Route::get('/dashboard', function() { return view('dashboard');}); 
+Route::get('/dashboard', function() { return view('dashboard');});
 Route::resources([
     'projects' => 'ProjectController',
     'projects.deliverables' => 'Project\DeliverableController',
