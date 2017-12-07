@@ -3,7 +3,7 @@
 
 @section('content')
     <h1> Registro de Medida</h1>
-    <form method="POST" action="">
+    <form method="POST" action="/projects/{{$project->id}}/measurments">
         <div class = "container">
             {{ csrf_field() }}
             <div class="form-group">
