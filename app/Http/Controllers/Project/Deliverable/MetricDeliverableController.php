@@ -7,6 +7,8 @@ use App\Deliverable;
 use App\Project;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Project;
+use App\Metric;
 
 class MetricDeliverableController extends Controller
 {
@@ -16,9 +18,9 @@ class MetricDeliverableController extends Controller
      * @param  \App\Deliverable  $deliverable
      * @return \Illuminate\Http\Response
      */
-    public function index(Deliverable $deliverable)
+    public function index(Project $project, Deliverable $deliverable)
     {
-        return view('project.deliverable.metricDeliverable.index', ['deliverable' => $deliverable,]);
+        return view('project.metricDeliverable.index', ['deliverable' => $deliverable]);
     }
 
     /**
@@ -27,10 +29,10 @@ class MetricDeliverableController extends Controller
      * @param  \App\Deliverable  $deliverable
      * @return \Illuminate\Http\Response
      */
-    public function create(Deliverable $deliverable)
+    public function create(Project $project, Deliverable $deliverable)
     {
 
-        return view('project.deliverable.metricDeliverable.create', ['deliverable' => $deliverable, 'metric' => App\Metric::all()]);
+        return view('project.metricDeliverable.create', ['deliverable' => $deliverable, 'metrics' => Metric::all(), 'project' => $project]);
     }
 
     /**
@@ -40,10 +42,11 @@ class MetricDeliverableController extends Controller
      * @param  \App\Deliverable  $deliverable
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, Deliverable $deliverable)
+    public function store(Request $request, Project $project, Deliverable $deliverable)
     {
-        $metricDeliverable = new MetricDeliverable;
-        $metricDeliverable;
+        $deliverable->metrics()->attach($request->input('metric'));
+        return redirect('/dashboard')->with(['success' => 'Metrica seleccionada']);
+
     }
 
     /**
@@ -53,7 +56,7 @@ class MetricDeliverableController extends Controller
      * @param  \App\MetricDeliverable  $metricDeliverable
      * @return \Illuminate\Http\Response
      */
-    public function show(Project $project,Deliverable $deliverable, MetricDeliverable $metricDeliverable)
+    public function show(Project $project, Deliverable $deliverable, MetricDeliverable $metricDeliverable)
     {
         return view('project.deliverable.metricDeliverable.show',['project'=>$project,'metricDeliverable' => $metricDeliverable]);
     }

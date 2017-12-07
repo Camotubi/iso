@@ -17,7 +17,8 @@ class DeliverableController extends Controller
      */
     public function index(Project $project)
     {
-        return view('project.deliverable.index', ['project' => $project]);
+      $deliverables = Deliverable::all();
+        return view('project.deliverable.index', ['project' => $project, 'deliverables' => $deliverables]);
     }
 
     /**
@@ -45,6 +46,7 @@ class DeliverableController extends Controller
         $deliverable -> name = $request->input('name');
         $deliverable -> project()->associate($project);
         $deliverable -> save();
+        return redirect('/dashboard')->with(['success' => 'Entregable creado']);
     }
 
     /**
