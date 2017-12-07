@@ -77,5 +77,61 @@ class MetricsTableSeeder extends Seeder
       $metric->formula = 'A/B';
       $metric->subcharacteristic()->associate(1);
       $metric->save();
+
+      $metric = new Metric;
+      $metric->name = 'Failure density against test cases';
+      $metric->formula = 'A/B';
+      $metric->subcharacteristic()->associate(1);
+      $metric->save();
+
+      $metric = new Metric;
+      $metric->name = 'Failure resolution';
+      $metric->formula = 'A/B';
+      $metric->subcharacteristic()->associate(1);
+      $metric->save();
+
+      $metric = new Metric;
+      $metric->name = 'Failure density';
+      $metric->formula = 'A/B';
+      $metric->subcharacteristic()->associate(1);
+      $metric->save();
+
+      $metric = new Metric;
+      $metric->name = 'Failure removal';
+      $metric->formula = 'A/B';
+      $metric->subcharacteristic()->associate(1);
+      $metric->save();
+
+      $metric = new Metric;
+      $metric->name = 'Test Coverage';
+      $metric->formula = 'A/B';
+      $metric->subcharacteristic()->associate(1);
+      $metric->save();
+
+      $metric = new Metric;
+      $metric->name = 'Test Maturity';
+      $metric->formula = 'A/B';
+      $metric->subcharacteristic()->associate(1);
+      $metric->save();
+
+      $metric = new Metric;
+      $metric->name = 'Breakdown Avoidance';
+      $metric->formula = '1-(A/B)';
+      $metric->subcharacteristic()->associate(1);
+      $metric->save();
+
+      $metric = new Metric;
+      $metric->name = 'Failure Avoidance';
+      $metric->formula = 'A/B';
+      $metric->subcharacteristic()->associate(1);
+      $metric->save();
+
+      $metric = new Metric;
+      $metric->name = 'Incorrect Operation Avoidance';
+      $metric->formula = 'A/B';
+      $metric->subcharacteristic()->associate(1);
+      $metric->save();
+
+      
     }
 }

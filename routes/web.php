@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('ProjectController@index', function () {
     return view('dashboard');
 });
 

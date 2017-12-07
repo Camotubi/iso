@@ -16,6 +16,7 @@
 							<a class="nav-link" href="/projects/create">Registrar</a>
 						</li>
 					</ul>
+                </div>
 				</li>
 				<li>
 					<a class="nav-fill" data-toggle="collapse" href="#collapse2" aria-expanded="false" aria-controls="collapseExample">
@@ -29,5 +30,4 @@
 						</ul>
 				</div>
 			</li>
-		<ul>
 	</div>
