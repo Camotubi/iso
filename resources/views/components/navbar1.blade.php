@@ -7,11 +7,5 @@
 			<li class="nav-item active">
 				<a class="nav-link" href="/dashboard">Dashboard</a>
 			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="/">Pagina Principal</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="/stats">Estadisticas</a>
-			</li>
 		</ul>
 	</div>
