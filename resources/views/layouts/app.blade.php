@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="csrf-token" content="{{ csrf_token() }}">
-        <title>ISO9126 Backroom - @yield('title')</title>
+        <title>ISO9126 Backroom</title>
         <link rel="stylesheet" href="/css/app.css">
         <link rel="stylesheet" href="/css/dashboard.css">
         <link rel="stylesheet" href="/css/custom.css">

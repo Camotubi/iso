@@ -12,7 +12,7 @@
 				<th>Creado en</th>
 				<th>Actualizado en</th>
 			</tr>
-            @foreach($project->deliverables()->get() as $deliverable)
+    @foreach($project->deliverables()->get() as $deliverable)
 			<tr>
                 <td>{{$deliverable->id}}</td>
             <td><a href="/projects/{{$project->id}}/deliverables/{{$deliverable->id}}">{{$deliverable->name}}</a></td>
@@ -21,5 +21,6 @@
 			</tr>
 		@endforeach
 		</table>
+		<a href="/projects/{{$project->id}}/deliverables/create" class="btn btn-primary">Crear nuevo entregable</a>
 	</div>
 @endsection
