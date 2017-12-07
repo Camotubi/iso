@@ -4,7 +4,6 @@
 <br>
 <h3>Entregables</h3>
 <br>
-<a href="/projects/{{$project->id}}/deliverables/create">Agregar Entregable</a>
 <table>
 			<tr>
 				<th>Codigo</th>
