@@ -52,7 +52,8 @@ class ProjectController extends Controller
       $project = Project::find($id);
       if(!is_null($project))
       {
-        return view('project.show', ['project' => $project]);
+        $deliverables = Deliverable::where('project_id', $id)->get();
+        return view('project.show', ['project' => $project, 'deliverables' => $deliverables]);
       }
       else
       {
