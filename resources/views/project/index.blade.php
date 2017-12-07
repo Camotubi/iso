@@ -11,7 +11,7 @@
 		@foreach($projects as $project)
 			<tr>
 				<td>{{$project->id}}</td>
-				<td><a href="/projects/{{$project->id}}/show">{{$project->name}}</a></td>
+				<td><a href="/projects/{{$project->id}}">{{$project->name}}</a></td>
 				<td>{{$project->created_at}}</td>
 				<td>{{$project->updated_at}}</td>
 			</tr>
