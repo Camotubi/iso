@@ -4,27 +4,15 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Relations\Pivot;
 
-class Evaluation extends Pivot
+class Evaluation extends Model
 {
-    public function deliverable()
+    public function metricDeliverable()
     {
-        return $this->belongsTo('App\Deliverable');
+        $this->belongsTo('App\MetricDeliverable');
     }
-
-    public function metric()
-    {
-        return $this->belongsTo('App\Metric');
-    }
-
     public function measurements()
     {
         return $this->hasMany('App\Measurement');
     }
 
-    public function currentValue()
-    {
-        $this->
-        $calculator = new \NXP\MathExecutor();
-
-    }
 }
