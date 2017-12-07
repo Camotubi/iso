@@ -28,8 +28,12 @@ class MetricDeliverableController extends Controller
      */
     public function create(Deliverable $deliverable)
     {
+<<<<<<< HEAD
 
         return view('project.deliverable.metricDeliverable.create', ['deliverable' => $deliverable, 'metric' => App\Metric::all()]);
+=======
+        view('project.metricDeliverable.create', ['metricas' => App\Metricas::all()];
+>>>>>>> 945c24dec995dcf6dbbd45325b4280a327eea705
     }
 
     /**
