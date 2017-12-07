@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Project extends Model
 {
-    public function deliverable()
+    public function deliverables()
     {
         return $this->hasMany('App\Deliverable');
     }

@@ -18,5 +18,7 @@ Route::get('/', function () {
 Route::get('/dashboard', function() { return view('dashboard');}); 
 Route::resources([
     'projects' => 'ProjectController',
+    'projects.deliverables' => 'Project\DeliverableController',
+
 
 ]);

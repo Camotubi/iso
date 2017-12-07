@@ -1,53 +1,60 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Project;
 
+use App\Deliverable;
 use App\Project;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
-class ProjectController extends Controller
+class DeliverableController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
+     * @param  \App\Project  $project
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Project $project)
     {
-        //
+        return view('project.deliverable.index', ['project' => $project]);
     }
 
     /**
      * Show the form for creating a new resource.
      *
+     * @param  \App\Project  $project
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Project $project)
     {
-        return view('project.create');
+
+        return view('project.deliverable.create', ['project' => $project]);
     }
 
     /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Project  $project
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, Project $project)
     {
-        $project = new Project;
-        $project->name = $request->input('name');
-        $project->save();
-        return redirect('/dashboard')->with(['success' => 'Proyecto creado']);
+        $deliverable = new Deliverable;
+        $deliverable -> name = $request->input('name');
+        $deliverable -> project()->associate($project);
+        $deliverable -> save();
     }
 
     /**
      * Display the specified resource.
      *
      * @param  \App\Project  $project
+     * @param  \App\Deliverable  $deliverable
      * @return \Illuminate\Http\Response
      */
-    public function show(Project $project)
+    public function show(Project $project, Deliverable $deliverable)
     {
         //
     }
@@ -56,9 +63,10 @@ class ProjectController extends Controller
      * Show the form for editing the specified resource.
      *
      * @param  \App\Project  $project
+     * @param  \App\Deliverable  $deliverable
      * @return \Illuminate\Http\Response
      */
-    public function edit(Project $project)
+    public function edit(Project $project, Deliverable $deliverable)
     {
         //
     }
@@ -68,9 +76,10 @@ class ProjectController extends Controller
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \App\Project  $project
+     * @param  \App\Deliverable  $deliverable
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Project $project)
+    public function update(Request $request, Project $project, Deliverable $deliverable)
     {
         //
     }
@@ -79,9 +88,10 @@ class ProjectController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  \App\Project  $project
+     * @param  \App\Deliverable  $deliverable
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Project $project)
+    public function destroy(Project $project, Deliverable $deliverable)
     {
         //
     }

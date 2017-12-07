@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Deliverable;
+use App\Project;
 use Illuminate\Http\Request;
 
 class DeliverableController extends Controller
@@ -22,9 +23,10 @@ class DeliverableController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($projectId)
     {
-        //
+
+        return view('deliverable.create', ['project' => Project::find($projectId)]);
     }
 
     /**
@@ -44,7 +46,7 @@ class DeliverableController extends Controller
      * @param  \App\deliverable  $deliverable
      * @return \Illuminate\Http\Response
      */
-    public function show(Deliverable $deliverable)
+    public function show($projectId, $deliverableId)
     {
         //
     }
