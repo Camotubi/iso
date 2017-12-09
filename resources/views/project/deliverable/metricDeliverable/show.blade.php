@@ -8,7 +8,7 @@
     Historial:
     <ul>
       @foreach ($aye as $yo)
-        <li>{{$yo}}</li>
+        <li>{{round($yo,2)}}</li>
       @endforeach
     </ul>
     <br>
