@@ -9,7 +9,7 @@
             </select>
         </div>
         <div class="form-group">
-            <label>Métrica:</label>
+            <label>Característica:</label>
             <select v-model="selectedCharacteristic" @change="getSubcharacteristics" class="form-control" >
                 <option v-for = "characteristic in characteristics" :value="characteristic.id">
                     {{characteristic.name}}
@@ -17,7 +17,7 @@
             </select>
         </div>
         <div class="form-group">
-            <label>Métrica:</label>
+            <label>Subcaracterística:</label>
             <select v-model="selectedSubcharacteristic" @change="getMetrics" class="form-control">
                 <option v-for = "subcharacteristic in subcharacteristics" :value="subcharacteristic.id">
                     {{subcharacteristic.name}}
@@ -68,7 +68,7 @@ export default  {
 		// Fetch initial results
 		this.getQualityAttributes();
     },
-    
+
     methods: {
 		getQualityAttributes() {
 			var self = this
@@ -100,7 +100,7 @@ export default  {
         },
 
 	}
-	
+
 
 }
 
