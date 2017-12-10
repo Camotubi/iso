@@ -14,7 +14,7 @@ class CharacteristicController extends Controller
      */
     public function index()
     {
-        //
+        return Characteristic::all();
     }
 
     /**

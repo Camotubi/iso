@@ -15,6 +15,7 @@ class QualityAttributeController extends Controller
     public function index()
     {
         //
+        return QualityAttribute::all();
     }
 
     /**
