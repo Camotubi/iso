@@ -17,5 +17,5 @@
 			</tr>
 		@endforeach
 		</table>
-	<a href="projects/create" class="btn btn-primary button">Crear Proyecto</a>
+	<a href="/projects/create" class="btn btn-primary button">Crear Proyecto</a>
 @endsection
