@@ -15,7 +15,9 @@ class MetricController extends Controller
     public function index(Request $request)
     {
       $parentid = $request->input('parent');
-      $metric = Metric::where('subcharacteristic_id', $parentid)->get();
+      $deliverable = Deliverable::find($request->input('deliverableId');
+      $metric = Metric::where('subcharacteristic_id', $parentid)
+        ->whereNotIn('id', $deliverable->metrics()->get()->pluck('id')->all())->get();
       return $metric;
     }
 
