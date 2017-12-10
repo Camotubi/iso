@@ -16,7 +16,7 @@ class CreateEvaluationsTable extends Migration
         Schema::create('evaluations', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
-            $table->date('date');
+            $table->date('date')->nullabel();
             $table->integer('metric_deliverable_id')->unsigned();
             $table->foreign('metric_deliverable_id')->references('id')->on('metric_deliverable');
         });
