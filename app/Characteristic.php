@@ -14,7 +14,7 @@ class Characteristic extends Model
 
     public function subcharacteristics()
     {
-        return $this->hasMany('App\Subcharacteristics');
+        return $this->hasMany('App\Subcharacteristic');
     }
 
 }

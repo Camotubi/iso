@@ -17,6 +17,6 @@ class Metric extends Model
     }
     public function metricDeliverables()
     {
-        return $this->hasMany('App\MetricDeliverable')->get();
+        return $this->hasMany('App\MetricDeliverable');
     }
 }
