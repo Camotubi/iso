@@ -47390,6 +47390,7 @@ var render = function() {
               }
             ],
             staticClass: "form-control",
+            attrs: { name: "metric" },
             on: {
               change: function($event) {
                 var $$selectedVal = Array.prototype.filter

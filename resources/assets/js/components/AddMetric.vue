@@ -28,7 +28,7 @@
         <input type="hidden" name="_token" :value="csrf">
         <div class="form-group">
             <label>Metrica:</label>
-            <select v-model="selectedMetric" class="form-control">
+            <select name="metric" v-model="selectedMetric" class="form-control">
                 <option v-for = "metric in metrics" :value="metric.id">
                     {{metric.name}}
                 </option>
