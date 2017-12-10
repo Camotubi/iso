@@ -345,7 +345,268 @@ class MetricsTableSeeder extends Seeder
        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
        culpa qui officia deserunt mollit anim id est laborum.';
       $metric->formula = '1-(A/B)';
+      $metric->subcharacteristic()->associate(8);
+      $metric->save();
+
+      #-----------Usability Associate(9)----------------------#
+
+      $metric = new Metric;
+      $metric->name = 'Completeness of Description';
+      $metric->description = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+       sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+       Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+       nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+       reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+       pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+       culpa qui officia deserunt mollit anim id est laborum.';
+      $metric->formula = 'A/B';
       $metric->subcharacteristic()->associate(9);
+      $metric->save();
+
+      $metric = new Metric;
+      $metric->name = 'Demostration Accessibility';
+      $metric->description = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+       sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+       Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+       nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+       reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+       pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+       culpa qui officia deserunt mollit anim id est laborum.';
+      $metric->formula = 'A/B';
+      $metric->subcharacteristic()->associate(9);
+      $metric->save();
+
+      $metric = new Metric;
+      $metric->name = 'Demostration Accessibility Use';
+      $metric->description = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+       sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+       Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+       nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+       reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+       pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+       culpa qui officia deserunt mollit anim id est laborum.';
+      $metric->formula = 'A/B';
+      $metric->subcharacteristic()->associate(9);
+      $metric->save();
+
+      $metric = new Metric;
+      $metric->name = 'Effectiveness of the user documentation and/or help system';
+      $metric->description = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+       sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+       Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+       nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+       reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+       pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+       culpa qui officia deserunt mollit anim id est laborum.';
+      $metric->formula = 'A/B';
+      $metric->subcharacteristic()->associate(9);
+      $metric->save();
+
+      $metric = new Metric;
+      $metric->name = 'Effectiveness of the user documentation and/or help system in use';
+      $metric->description = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+       sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+       Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+       nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+       reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+       pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+       culpa qui officia deserunt mollit anim id est laborum.';
+      $metric->formula = 'A/B';
+      $metric->subcharacteristic()->associate(9);
+      $metric->save();
+
+      $metric = new Metric;
+      $metric->name = 'Help Frequency';
+      $metric->description = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+       sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+       Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+       nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+       reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+       pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+       culpa qui officia deserunt mollit anim id est laborum.';
+      $metric->formula = 'A';
+      $metric->subcharacteristic()->associate(9);
+      $metric->save();
+
+      $metric = new Metric;
+      $metric->name = 'Operational Consistency in Use';
+      $metric->description = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+       sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+       Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+       nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+       reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+       pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+       culpa qui officia deserunt mollit anim id est laborum.';
+      $metric->formula = '1-(A/B)';
+      $metric->subcharacteristic()->associate(9);
+      $metric->save();
+
+      $metric = new Metric;
+      $metric->name = 'Error Correction in Use';
+      $metric->description = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+       sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+       Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+       nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+       reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+       pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+       culpa qui officia deserunt mollit anim id est laborum.';
+      $metric->formula = '1-(A/B)';
+      $metric->subcharacteristic()->associate(9);
+      $metric->save();
+
+      $metric = new Metric;
+      $metric->name = 'Default Value Availability in Use';
+      $metric->description = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+       sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+       Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+       nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+       reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+       pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+       culpa qui officia deserunt mollit anim id est laborum.';
+      $metric->formula = '1-(A/B)';
+      $metric->subcharacteristic()->associate(9);
+      $metric->save();
+
+      $metric = new Metric;
+      $metric->name = 'Interface Appareance Customisability';
+      $metric->description = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+       sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+       Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+       nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+       reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+       pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+       culpa qui officia deserunt mollit anim id est laborum.';
+      $metric->formula = 'A/B';
+      $metric->subcharacteristic()->associate(9);
+      $metric->save();
+
+      $metric = new Metric;
+      $metric->name = 'Usability Compliance';
+      $metric->description = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+       sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+       Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+       nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+       reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+       pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+       culpa qui officia deserunt mollit anim id est laborum.';
+      $metric->formula = '1-(A/B)';
+      $metric->subcharacteristic()->associate(9);
+      $metric->save();
+
+      #---------------Efficiency associate(10)---------------#
+
+      //Time Behavior Metrics
+      $metric = new Metric;
+      $metric->name = 'Response Time';
+      $metric->description = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+       sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+       Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+       nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+       reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+       pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+       culpa qui officia deserunt mollit anim id est laborum.';
+      $metric->formula = 'T1/T2';
+      $metric->subcharacteristic()->associate(10);
+      $metric->save();
+
+      //Resource Utilisation Metrics
+      $metric = new Metric;
+      $metric->name = 'I/O Devices Utilisation';
+      $metric->description = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+       sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+       Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+       nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+       reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+       pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+       culpa qui officia deserunt mollit anim id est laborum.';
+      $metric->formula = 'A/B';
+      $metric->subcharacteristic()->associate(10);
+      $metric->save();
+
+      //Efficiency Compliance Metrics
+      $metric = new Metric;
+      $metric->name = 'Efficiency Compliance';
+      $metric->description = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+       sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+       Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+       nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+       reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+       pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+       culpa qui officia deserunt mollit anim id est laborum.';
+      $metric->formula = '1-(A/B)';
+      $metric->subcharacteristic()->associate(10);
+      $metric->save();
+
+
+      #--------MaintainabilityMetrics Associate(11)-------#
+
+      //Analysability Metrics
+      $metric = new Metric;
+      $metric->name = 'Audit Trial Capability';
+      $metric->description = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+       sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+       Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+       nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+       reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+       pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+       culpa qui officia deserunt mollit anim id est laborum.';
+      $metric->formula = 'A/B';
+      $metric->subcharacteristic()->associate(11);
+      $metric->save();
+
+      $metric = new Metric;
+      $metric->name = 'Diagnostic Support';
+      $metric->description = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+       sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+       Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+       nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+       reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+       pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+       culpa qui officia deserunt mollit anim id est laborum.';
+      $metric->formula = 'A/B';
+      $metric->subcharacteristic()->associate(11);
+      $metric->save();
+
+      //Changeability Metrics
+      $metric = new Metric;
+      $metric->name = 'Software Change Control Capability';
+      $metric->description = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+       sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+       Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+       nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+       reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+       pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+       culpa qui officia deserunt mollit anim id est laborum.';
+      $metric->formula = 'A/B';
+      $metric->subcharacteristic()->associate(11);
+      $metric->save();
+
+      //Stability Metrics
+      $metric = new Metric;
+      $metric->name = 'Re-Test Efficiency';
+      $metric->description = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+       sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+       Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+       nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+       reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+       pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+       culpa qui officia deserunt mollit anim id est laborum.';
+      $metric->formula = 'A/B';
+      $metric->subcharacteristic()->associate(11);
+      $metric->save();
+
+      //Maintainability Metrics
+      $metric = new Metric;
+      $metric->name = 'Maintainability Compliance';
+      $metric->description = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+       sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+       Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+       nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+       reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+       pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+       culpa qui officia deserunt mollit anim id est laborum.';
+      $metric->formula = '1-(A/B)';
+      $metric->subcharacteristic()->associate(11);
       $metric->save();
     }
 }
