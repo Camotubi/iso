@@ -41,7 +41,7 @@ class SubcharacteristicsTableSeeder extends Seeder
       $subcharacteristic->save();
 
       //Reliability
-      
+
       $subcharacteristic = new Subcharacteristic;
       $subcharacteristic->name = 'Maturity';
       $subcharacteristic->characteristic()->associate(2);
@@ -194,7 +194,7 @@ class SubcharacteristicsTableSeeder extends Seeder
       $subcharacteristic->save();
 
       //Reliability
-      
+
       $subcharacteristic = new Subcharacteristic;
       $subcharacteristic->name = 'Maturity';
       $subcharacteristic->characteristic()->associate(8);
@@ -218,7 +218,7 @@ class SubcharacteristicsTableSeeder extends Seeder
 //usability
 
       $subcharacteristic = new Subcharacteristic;
-      $subcharacteristic->name = 'Understandability';
+      $subcharacteristic->name = 'Understandability';//37
       $subcharacteristic->characteristic()->associate(9);
       $subcharacteristic->save();
 
@@ -264,56 +264,56 @@ class SubcharacteristicsTableSeeder extends Seeder
 //Maintainability
 
       $subcharacteristic = new Subcharacteristic;
-      $subcharacteristic->name = 'Analysability';
+      $subcharacteristic->name = 'Analysability';#44
       $subcharacteristic->characteristic()->associate(11);
       $subcharacteristic->save();
 
       $subcharacteristic = new Subcharacteristic;
-      $subcharacteristic->name = 'Changeability';
+      $subcharacteristic->name = 'Changeability';#45
       $subcharacteristic->characteristic()->associate(11);
       $subcharacteristic->save();
 
       $subcharacteristic = new Subcharacteristic;
-      $subcharacteristic->name = 'Stability';
+      $subcharacteristic->name = 'Stability';#46
       $subcharacteristic->characteristic()->associate(11);
       $subcharacteristic->save();
 
       $subcharacteristic = new Subcharacteristic;
-      $subcharacteristic->name = 'Testability';
+      $subcharacteristic->name = 'Testability';#47
       $subcharacteristic->characteristic()->associate(11);
-      $subcharacteristic->save();
+      $subcharacteristic->save();#48
 
       $subcharacteristic = new Subcharacteristic;
-      $subcharacteristic->name = 'Maintainability compliance';
+      $subcharacteristic->name = 'Maintainability compliance';#48
       $subcharacteristic->characteristic()->associate(11);
-      $subcharacteristic->save();
+      $subcharacteristic->save();#49
 
 
 
 //Portability
 
       $subcharacteristic = new Subcharacteristic;
-      $subcharacteristic->name = 'Adaptability';
+      $subcharacteristic->name = 'Adaptability';#50
       $subcharacteristic->characteristic()->associate(12);
       $subcharacteristic->save();
 
       $subcharacteristic = new Subcharacteristic;
-      $subcharacteristic->name = 'Instability';
+      $subcharacteristic->name = 'Instability';#51
       $subcharacteristic->characteristic()->associate(12);
       $subcharacteristic->save();
 
       $subcharacteristic = new Subcharacteristic;
-      $subcharacteristic->name = 'Coexistance';
+      $subcharacteristic->name = 'Coexistance';#52
       $subcharacteristic->characteristic()->associate(12);
       $subcharacteristic->save();
 
       $subcharacteristic = new Subcharacteristic;
-      $subcharacteristic->name = 'Replaceability';
+      $subcharacteristic->name = 'Replaceability';#53
       $subcharacteristic->characteristic()->associate(12);
       $subcharacteristic->save();
 
       $subcharacteristic = new Subcharacteristic;
-      $subcharacteristic->name = 'Portability Compliance';
+      $subcharacteristic->name = 'Portability Compliance';#54
       $subcharacteristic->characteristic()->associate(12);
       $subcharacteristic->save();
 
