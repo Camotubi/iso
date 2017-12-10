@@ -9,11 +9,7 @@
             </select>
         </div>
         <div class="form-group">
-<<<<<<< HEAD
             <label>Característica:</label>
-=======
-            <label>Caracteristica:</label>
->>>>>>> f2a96dcf4b7fab34718df9dd1e6a0ed1aaa92fec
             <select v-model="selectedCharacteristic" @change="getSubcharacteristics" class="form-control" >
                 <option v-for = "characteristic in characteristics" :value="characteristic.id">
                     {{characteristic.name}}
@@ -21,11 +17,7 @@
             </select>
         </div>
         <div class="form-group">
-<<<<<<< HEAD
             <label>Subcaracterística:</label>
-=======
-            <label>Subcaracteristica:</label>
->>>>>>> f2a96dcf4b7fab34718df9dd1e6a0ed1aaa92fec
             <select v-model="selectedSubcharacteristic" @change="getMetrics" class="form-control">
                 <option v-for = "subcharacteristic in subcharacteristics" :value="subcharacteristic.id">
                     {{subcharacteristic.name}}
