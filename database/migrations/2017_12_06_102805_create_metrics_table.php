@@ -17,7 +17,7 @@ class CreateMetricsTable extends Migration
             $table->increments('id');
             $table->timestamps();
             $table->string('name');
-            $table->text('description');
+            $table->text('description')->nullable();
             $table->string('formula');
             $table->integer('subcharacteristic_id')->unsigned();
             $table->foreign('subcharacteristic_id')->references('id')->on('subcharacteristics');
