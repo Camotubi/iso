@@ -12,9 +12,11 @@ class CharacteristicController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        return Characteristic::all();
+        $parentid = $request->input('parent');
+        $characteristic = Characteristic::where('quality_attribute_id', $parentid)->get();
+        return $characteristic;
     }
 
     /**

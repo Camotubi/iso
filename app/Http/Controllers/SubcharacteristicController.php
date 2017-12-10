@@ -12,9 +12,11 @@ class SubcharacteristicController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+      $parentid = $request->input('parent');
+      $subcharacteristic = Subcharacteristic::where('characteristic_id', $parentid)->get();
+      return $subcharacteristic;
     }
 
     /**
