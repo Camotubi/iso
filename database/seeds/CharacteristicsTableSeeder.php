@@ -72,6 +72,9 @@ class CharacteristicsTableSeeder extends Seeder
       $characteristic->qualityAttribute()->associate(2);
       $characteristic->save();
 
+
+///quality in use
+
       $characteristic = new Characteristic;
       $characteristic->name = 'Effectivness';
       $characteristic->qualityAttribute()->associate(3);
