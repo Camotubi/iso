@@ -47219,7 +47219,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     getMetrics: function getMetrics() {
       var self = this;
       var metrics = axios.get('/api/metrics/?parent=' + this.selectedSubcharacteristic + '&deliverableId=' + this.deliverable).then(function (response) {
-        self.subcharacteristics = response.data;
+        self.metrics = response.data;
       });
     }
   }
@@ -47278,7 +47278,7 @@ var render = function() {
     ]),
     _vm._v(" "),
     _c("div", { staticClass: "form-group" }, [
-      _c("label", [_vm._v("Métrica:")]),
+      _c("label", [_vm._v("Caracteristica:")]),
       _vm._v(" "),
       _c(
         "select",
@@ -47324,7 +47324,7 @@ var render = function() {
     ]),
     _vm._v(" "),
     _c("div", { staticClass: "form-group" }, [
-      _c("label", [_vm._v("Métrica:")]),
+      _c("label", [_vm._v("Subcaracteristica:")]),
       _vm._v(" "),
       _c(
         "select",
@@ -47376,7 +47376,7 @@ var render = function() {
       }),
       _vm._v(" "),
       _c("div", { staticClass: "form-group" }, [
-        _c("label", [_vm._v("Métrica:")]),
+        _c("label", [_vm._v("Metrica:")]),
         _vm._v(" "),
         _c(
           "select",
