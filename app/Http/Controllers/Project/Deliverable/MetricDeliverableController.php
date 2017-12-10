@@ -31,7 +31,7 @@ class MetricDeliverableController extends Controller
     public function create(Project $project, Deliverable $deliverable)
     {
 
-        return view('project.deliverable.metricDeliverable.create', ['deliverable' => $deliverable, 
+        return view('project.deliverable.metricDeliverable.create', ['deliverable' => $deliverable,
             'metrics' => Metric::whereNotIn('id',$deliverable->metrics()->get()->pluck('id')->all())->get(), 'project' => $project]);
     }
 
@@ -45,7 +45,8 @@ class MetricDeliverableController extends Controller
     public function store(Request $request, Project $project, Deliverable $deliverable)
     {
         $deliverable->metrics()->attach($request->input('metric'));
-        return redirect('/dashboard')->with(['success' => 'Metrica seleccionada']);
+        return redirect("/projects/".$project->id."/deliverables/".$deliverable->id)
+          ->with(['success' => 'Metrica seleccionada']);
 
     }
 

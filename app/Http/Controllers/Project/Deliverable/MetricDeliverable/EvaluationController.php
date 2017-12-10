@@ -81,7 +81,8 @@ class EvaluationController extends Controller
 
 /*Load array */
 
-        return redirect('/dashboard');
+        return redirect("/projects/".$project->id."/deliverables/".$deliverable->id."/metricDeliverables/".$metricDeliverable->id)
+          ->with(['success' => 'Evaluacion agregada']);
     }
 
     /**
