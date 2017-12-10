@@ -47278,7 +47278,7 @@ var render = function() {
     ]),
     _vm._v(" "),
     _c("div", { staticClass: "form-group" }, [
-      _c("label", [_vm._v("Caracteristica:")]),
+      _c("label", [_vm._v("Característica:")]),
       _vm._v(" "),
       _c(
         "select",
@@ -47324,7 +47324,7 @@ var render = function() {
     ]),
     _vm._v(" "),
     _c("div", { staticClass: "form-group" }, [
-      _c("label", [_vm._v("Subcaracteristica:")]),
+      _c("label", [_vm._v("Subcaracterística:")]),
       _vm._v(" "),
       _c(
         "select",
