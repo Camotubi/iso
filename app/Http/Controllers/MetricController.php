@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Metric;
+use App\Deliverable;
 use Illuminate\Http\Request;
 
 class MetricController extends Controller
@@ -15,7 +16,7 @@ class MetricController extends Controller
     public function index(Request $request)
     {
       $parentid = $request->input('parent');
-      $deliverable = Deliverable::find($request->input('deliverableId');
+      $deliverable = Deliverable::find($request->input('deliverableId'));
       $metric = Metric::where('subcharacteristic_id', $parentid)
         ->whereNotIn('id', $deliverable->metrics()->get()->pluck('id')->all())->get();
       return $metric;
