@@ -16,7 +16,7 @@ class SubcharacteristicsTableSeeder extends Seeder
     //External
         //funcionality
       $subcharacteristic = new Subcharacteristic;
-      $subcharacteristic->name = 'Suitability';
+      $subcharacteristic->name = 'Suitability';//1
       $subcharacteristic->characteristic()->associate(1);
       $subcharacteristic->save();
 
@@ -36,14 +36,14 @@ class SubcharacteristicsTableSeeder extends Seeder
       $subcharacteristic->save();
 
       $subcharacteristic = new Subcharacteristic;
-      $subcharacteristic->name = 'Functionality Compliance';
+      $subcharacteristic->name = 'Functionality Compliance';//5
       $subcharacteristic->characteristic()->associate(1);
       $subcharacteristic->save();
 
       //Reliability
-      
+
       $subcharacteristic = new Subcharacteristic;
-      $subcharacteristic->name = 'Maturity';
+      $subcharacteristic->name = 'Maturity';//6
       $subcharacteristic->characteristic()->associate(2);
       $subcharacteristic->save();
 
@@ -58,14 +58,14 @@ class SubcharacteristicsTableSeeder extends Seeder
       $subcharacteristic->save();
 
       $subcharacteristic = new Subcharacteristic;
-      $subcharacteristic->name = 'Reliability Compliance';
+      $subcharacteristic->name = 'Reliability Compliance';//9
       $subcharacteristic->characteristic()->associate(2);
       $subcharacteristic->save();
 
 //usability
 
       $subcharacteristic = new Subcharacteristic;
-      $subcharacteristic->name = 'Understandability';
+      $subcharacteristic->name = 'Understandability';//10
       $subcharacteristic->characteristic()->associate(3);
       $subcharacteristic->save();
 
@@ -85,14 +85,14 @@ class SubcharacteristicsTableSeeder extends Seeder
       $subcharacteristic->save();
 
       $subcharacteristic = new Subcharacteristic;
-      $subcharacteristic->name = 'Usability compliance';
+      $subcharacteristic->name = 'Usability compliance';//14
       $subcharacteristic->characteristic()->associate(3);
       $subcharacteristic->save();
 
 //efficincy
 
       $subcharacteristic = new Subcharacteristic;
-      $subcharacteristic->name = 'Time Behavior';
+      $subcharacteristic->name = 'Time Behavior';//15
       $subcharacteristic->characteristic()->associate(4);
       $subcharacteristic->save();
 
@@ -102,7 +102,7 @@ class SubcharacteristicsTableSeeder extends Seeder
       $subcharacteristic->save();
 
       $subcharacteristic = new Subcharacteristic;
-      $subcharacteristic->name = 'Efficiency Compliance';
+      $subcharacteristic->name = 'Efficiency Compliance';//17
       $subcharacteristic->characteristic()->associate(4);
       $subcharacteristic->save();
 
@@ -111,7 +111,7 @@ class SubcharacteristicsTableSeeder extends Seeder
 //Maintainability
 
       $subcharacteristic = new Subcharacteristic;
-      $subcharacteristic->name = 'Analysability';
+      $subcharacteristic->name = 'Analysability';//18
       $subcharacteristic->characteristic()->associate(5);
       $subcharacteristic->save();
 
@@ -131,7 +131,7 @@ class SubcharacteristicsTableSeeder extends Seeder
       $subcharacteristic->save();
 
       $subcharacteristic = new Subcharacteristic;
-      $subcharacteristic->name = 'Maintainability compliance';
+      $subcharacteristic->name = 'Maintainability compliance';//22
       $subcharacteristic->characteristic()->associate(5);
       $subcharacteristic->save();
 
@@ -140,7 +140,7 @@ class SubcharacteristicsTableSeeder extends Seeder
 //Portability
 
       $subcharacteristic = new Subcharacteristic;
-      $subcharacteristic->name = 'Adaptability';
+      $subcharacteristic->name = 'Adaptability';//23
       $subcharacteristic->characteristic()->associate(6);
       $subcharacteristic->save();
 
@@ -161,7 +161,7 @@ class SubcharacteristicsTableSeeder extends Seeder
 
       $subcharacteristic = new Subcharacteristic;
       $subcharacteristic->name = 'Portability Compliance';
-      $subcharacteristic->characteristic()->associate(6);
+      $subcharacteristic->characteristic()->associate(6);//27
       $subcharacteristic->save();
 
 
@@ -169,7 +169,7 @@ class SubcharacteristicsTableSeeder extends Seeder
     //Internal
         //funcionality
       $subcharacteristic = new Subcharacteristic;
-      $subcharacteristic->name = 'Suitability';
+      $subcharacteristic->name = 'Suitability';//28
       $subcharacteristic->characteristic()->associate(7);
       $subcharacteristic->save();
 
@@ -189,14 +189,14 @@ class SubcharacteristicsTableSeeder extends Seeder
       $subcharacteristic->save();
 
       $subcharacteristic = new Subcharacteristic;
-      $subcharacteristic->name = 'Functionality Compliance';
+      $subcharacteristic->name = 'Functionality Compliance';//32
       $subcharacteristic->characteristic()->associate(7);
       $subcharacteristic->save();
 
       //Reliability
-      
+
       $subcharacteristic = new Subcharacteristic;
-      $subcharacteristic->name = 'Maturity';
+      $subcharacteristic->name = 'Maturity';//33
       $subcharacteristic->characteristic()->associate(8);
       $subcharacteristic->save();
 
@@ -211,7 +211,7 @@ class SubcharacteristicsTableSeeder extends Seeder
       $subcharacteristic->save();
 
       $subcharacteristic = new Subcharacteristic;
-      $subcharacteristic->name = 'Reliability Compliance';
+      $subcharacteristic->name = 'Reliability Compliance';//36
       $subcharacteristic->characteristic()->associate(8);
       $subcharacteristic->save();
 
@@ -219,7 +219,7 @@ class SubcharacteristicsTableSeeder extends Seeder
 
       $subcharacteristic = new Subcharacteristic;
       $subcharacteristic->name = 'Understandability';
-      $subcharacteristic->characteristic()->associate(9);
+      $subcharacteristic->characteristic()->associate(9);//37
       $subcharacteristic->save();
 
       $subcharacteristic = new Subcharacteristic;
@@ -239,13 +239,13 @@ class SubcharacteristicsTableSeeder extends Seeder
 
       $subcharacteristic = new Subcharacteristic;
       $subcharacteristic->name = 'Usability compliance';
-      $subcharacteristic->characteristic()->associate(9);
+      $subcharacteristic->characteristic()->associate(9);//41
       $subcharacteristic->save();
 
 //efficincy
 
       $subcharacteristic = new Subcharacteristic;
-      $subcharacteristic->name = 'Time Behavior';
+      $subcharacteristic->name = 'Time Behavior';//42
       $subcharacteristic->characteristic()->associate(10);
       $subcharacteristic->save();
 
@@ -255,7 +255,7 @@ class SubcharacteristicsTableSeeder extends Seeder
       $subcharacteristic->save();
 
       $subcharacteristic = new Subcharacteristic;
-      $subcharacteristic->name = 'Efficiency Compliance';
+      $subcharacteristic->name = 'Efficiency Compliance';//44
       $subcharacteristic->characteristic()->associate(10);
       $subcharacteristic->save();
 
@@ -265,7 +265,7 @@ class SubcharacteristicsTableSeeder extends Seeder
 
       $subcharacteristic = new Subcharacteristic;
       $subcharacteristic->name = 'Analysability';
-      $subcharacteristic->characteristic()->associate(11);
+      $subcharacteristic->characteristic()->associate(11);//45
       $subcharacteristic->save();
 
       $subcharacteristic = new Subcharacteristic;
@@ -284,7 +284,7 @@ class SubcharacteristicsTableSeeder extends Seeder
       $subcharacteristic->save();
 
       $subcharacteristic = new Subcharacteristic;
-      $subcharacteristic->name = 'Maintainability compliance';
+      $subcharacteristic->name = 'Maintainability compliance';//49
       $subcharacteristic->characteristic()->associate(11);
       $subcharacteristic->save();
 
@@ -293,7 +293,7 @@ class SubcharacteristicsTableSeeder extends Seeder
 //Portability
 
       $subcharacteristic = new Subcharacteristic;
-      $subcharacteristic->name = 'Adaptability';
+      $subcharacteristic->name = 'Adaptability';//50
       $subcharacteristic->characteristic()->associate(12);
       $subcharacteristic->save();
 
@@ -313,7 +313,7 @@ class SubcharacteristicsTableSeeder extends Seeder
       $subcharacteristic->save();
 
       $subcharacteristic = new Subcharacteristic;
-      $subcharacteristic->name = 'Portability Compliance';
+      $subcharacteristic->name = 'Portability Compliance';//54
       $subcharacteristic->characteristic()->associate(12);
       $subcharacteristic->save();
 
@@ -322,7 +322,7 @@ class SubcharacteristicsTableSeeder extends Seeder
       //
 
       $characteristic = new Subcharacteristic;
-      $characteristic->name = 'Effectivness';
+      $characteristic->name = 'Effectivness';//55
       $characteristic->characteristic()->associate(13);
       $characteristic->save();
 
@@ -337,7 +337,7 @@ class SubcharacteristicsTableSeeder extends Seeder
       $characteristic->save();
 
       $characteristic = new Subcharacteristic;
-      $characteristic->name = 'Satisfaction';
+      $characteristic->name = 'Satisfaction';//58
       $characteristic->characteristic()->associate(16);
       $characteristic->save();
 
