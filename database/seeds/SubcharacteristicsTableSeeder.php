@@ -322,7 +322,7 @@ class SubcharacteristicsTableSeeder extends Seeder
       //
 
       $characteristic = new Subcharacteristic;
-      $characteristic->name = 'Effectivness';
+      $characteristic->name = 'Effectivness';//55
       $characteristic->characteristic()->associate(13);
       $characteristic->save();
 
@@ -337,7 +337,7 @@ class SubcharacteristicsTableSeeder extends Seeder
       $characteristic->save();
 
       $characteristic = new Subcharacteristic;
-      $characteristic->name = 'Satisfaction';
+      $characteristic->name = 'Satisfaction';//58
       $characteristic->characteristic()->associate(16);
       $characteristic->save();
 

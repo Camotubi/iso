@@ -345,7 +345,20 @@ class MetricsTableSeeder extends Seeder
        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
        culpa qui officia deserunt mollit anim id est laborum.';
       $metric->formula = '1-(A/B)';
-      $metric->subcharacteristic()->associate(8);
+      $metric->subcharacteristic()->associate(9);
+      $metric->save();
+
+      $metric = new Metric;
+      $metric->name = 'Text';
+      $metric->description = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+       sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+       Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+       nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+       reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+       pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+       culpa qui officia deserunt mollit anim id est laborum.';
+      $metric->formula = '1-(A/B)';
+      $metric->subcharacteristic()->associate(10);
       $metric->save();
 
       $metric = new Metric;
@@ -358,7 +371,7 @@ class MetricsTableSeeder extends Seeder
        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
        culpa qui officia deserunt mollit anim id est laborum.';
       $metric->formula = 'A/B';
-      $metric->subcharacteristic()->associate(10);
+      $metric->subcharacteristic()->associate(11);
       $metric->save();
 
       $metric = new Metric;
@@ -371,7 +384,7 @@ class MetricsTableSeeder extends Seeder
        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
        culpa qui officia deserunt mollit anim id est laborum.';
       $metric->formula = 'A/B';
-      $metric->subcharacteristic()->associate(10);
+      $metric->subcharacteristic()->associate(11);
       $metric->save();
 
       $metric = new Metric;
@@ -384,7 +397,7 @@ class MetricsTableSeeder extends Seeder
        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
        culpa qui officia deserunt mollit anim id est laborum.';
       $metric->formula = 'A';
-      $metric->subcharacteristic()->associate(10);
+      $metric->subcharacteristic()->associate(11);
       $metric->save();
 
 //Operability
@@ -398,7 +411,7 @@ class MetricsTableSeeder extends Seeder
        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
        culpa qui officia deserunt mollit anim id est laborum.';
       $metric->formula = '1-(A/B)';
-      $metric->subcharacteristic()->associate(11);
+      $metric->subcharacteristic()->associate(12);
       $metric->save();
 
       $metric = new Metric;
@@ -411,7 +424,7 @@ class MetricsTableSeeder extends Seeder
        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
        culpa qui officia deserunt mollit anim id est laborum.';
       $metric->formula = '1-(A/B)';
-      $metric->subcharacteristic()->associate(11);
+      $metric->subcharacteristic()->associate(12);
       $metric->save();
 
       $metric = new Metric;
@@ -424,7 +437,7 @@ class MetricsTableSeeder extends Seeder
        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
        culpa qui officia deserunt mollit anim id est laborum.';
       $metric->formula = '1-(A/B)';
-      $metric->subcharacteristic()->associate(11);
+      $metric->subcharacteristic()->associate(12);
       $metric->save();
 
 //Attractiveness Compliance
@@ -438,7 +451,7 @@ class MetricsTableSeeder extends Seeder
        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
        culpa qui officia deserunt mollit anim id est laborum.';
       $metric->formula = 'A/B';
-      $metric->subcharacteristic()->associate(12);
+      $metric->subcharacteristic()->associate(13);
       $metric->save();
 
 //Usability Compliance
@@ -452,7 +465,7 @@ class MetricsTableSeeder extends Seeder
        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
        culpa qui officia deserunt mollit anim id est laborum.';
       $metric->formula = '1-(A/B)';
-      $metric->subcharacteristic()->associate(13);
+      $metric->subcharacteristic()->associate(14);
       $metric->save();
 
       #---------------Efficiency associate(10)---------------#
@@ -468,7 +481,7 @@ class MetricsTableSeeder extends Seeder
        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
        culpa qui officia deserunt mollit anim id est laborum.';
       $metric->formula = 'T1/T2';
-      $metric->subcharacteristic()->associate(14);
+      $metric->subcharacteristic()->associate(15);
       $metric->save();
 
       //Resource Utilisation Metrics
@@ -482,7 +495,7 @@ class MetricsTableSeeder extends Seeder
        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
        culpa qui officia deserunt mollit anim id est laborum.';
       $metric->formula = 'A/B';
-      $metric->subcharacteristic()->associate(15);
+      $metric->subcharacteristic()->associate(16);
       $metric->save();
 
       //Efficiency Compliance Metrics
@@ -496,7 +509,7 @@ class MetricsTableSeeder extends Seeder
        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
        culpa qui officia deserunt mollit anim id est laborum.';
       $metric->formula = '1-(A/B)';
-      $metric->subcharacteristic()->associate(16);
+      $metric->subcharacteristic()->associate(17);
       $metric->save();
 
 
@@ -513,7 +526,7 @@ class MetricsTableSeeder extends Seeder
        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
        culpa qui officia deserunt mollit anim id est laborum.';
       $metric->formula = 'A/B';
-      $metric->subcharacteristic()->associate(17);
+      $metric->subcharacteristic()->associate(18);
       $metric->save();
 
       $metric = new Metric;
@@ -1291,7 +1304,60 @@ class MetricsTableSeeder extends Seeder
 
       #------------ Quality in Use ------------#
 
-      //
+      //Effectivness Metrics
+      $metric = new Metric;
+      $metric->name = 'Error Frecuency';
+      $metric->description = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+       sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+       Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+       nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+       reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+       pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+       culpa qui officia deserunt mollit anim id est laborum.';
+      $metric->formula = 'A/T';
+      $metric->subcharacteristic()->associate(55);
+      $metric->save();
 
+      //Productivy
+      $metric = new Metric;
+      $metric->name = 'Productive Proportion';
+      $metric->description = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+       sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+       Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+       nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+       reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+       pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+       culpa qui officia deserunt mollit anim id est laborum.';
+      $metric->formula = 'TA/TB';
+      $metric->subcharacteristic()->associate(56);
+      $metric->save();
+
+      //Safety
+      $metric = new Metric;
+      $metric->name = 'User and Health Safety';
+      $metric->description = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+       sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+       Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+       nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+       reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+       pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+       culpa qui officia deserunt mollit anim id est laborum.';
+      $metric->formula = '1-(A/B)';
+      $metric->subcharacteristic()->associate(57);
+      $metric->save();
+
+      //Satisfaction
+      $metric = new Metric;
+      $metric->name = 'Satisfaction Scale';
+      $metric->description = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+       sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+       Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+       nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+       reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+       pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+       culpa qui officia deserunt mollit anim id est laborum.';
+      $metric->formula = 'A/B';
+      $metric->subcharacteristic()->associate(58);
+      $metric->save();
     }
 }
