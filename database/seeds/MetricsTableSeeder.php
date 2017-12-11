@@ -639,7 +639,7 @@ class MetricsTableSeeder extends Seeder
        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
        culpa qui officia deserunt mollit anim id est laborum.';
       $metric->formula = '1-(A/B)';
-      $metric->subcharacteristic()->associate(27);
+      $metric->subcharacteristic()->associate(28);
       $metric->save();
 
       $metric = new Metric;
@@ -652,7 +652,7 @@ class MetricsTableSeeder extends Seeder
        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
        culpa qui officia deserunt mollit anim id est laborum.';
       $metric->formula = '1-(A/B)';
-      $metric->subcharacteristic()->associate(27);
+      $metric->subcharacteristic()->associate(28);
       $metric->save();
 
       $metric = new Metric;
@@ -665,7 +665,7 @@ class MetricsTableSeeder extends Seeder
        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
        culpa qui officia deserunt mollit anim id est laborum.';
       $metric->formula = '1-(A/B)';
-      $metric->subcharacteristic()->associate(27);
+      $metric->subcharacteristic()->associate(28);
       $metric->save();
 
       $metric = new Metric;
@@ -678,7 +678,7 @@ class MetricsTableSeeder extends Seeder
        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
        culpa qui officia deserunt mollit anim id est laborum.';
       $metric->formula = '1-(A/B)';
-      $metric->subcharacteristic()->associate(27);
+      $metric->subcharacteristic()->associate(28);
       $metric->save();
 
 
@@ -693,7 +693,7 @@ class MetricsTableSeeder extends Seeder
        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
        culpa qui officia deserunt mollit anim id est laborum.';
       $metric->formula = '1-(A/T)';
-      $metric->subcharacteristic()->associate(28);
+      $metric->subcharacteristic()->associate(29);
       $metric->save();
 
 
@@ -709,7 +709,7 @@ class MetricsTableSeeder extends Seeder
        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
        culpa qui officia deserunt mollit anim id est laborum.';
       $metric->formula = '1-(A/T)';
-      $metric->subcharacteristic()->associate(28);
+      $metric->subcharacteristic()->associate(29);
       $metric->save();
 
 
@@ -724,7 +724,7 @@ class MetricsTableSeeder extends Seeder
        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
        culpa qui officia deserunt mollit anim id est laborum.';
       $metric->formula = '1-(A/T)';
-      $metric->subcharacteristic()->associate(28);
+      $metric->subcharacteristic()->associate(29);
       $metric->save();
 
 
@@ -739,7 +739,7 @@ class MetricsTableSeeder extends Seeder
        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
        culpa qui officia deserunt mollit anim id est laborum.';
       $metric->formula = 'A/B';
-      $metric->subcharacteristic()->associate(29);
+      $metric->subcharacteristic()->associate(30);
       $metric->save();
 
       $metric = new Metric;
@@ -752,7 +752,7 @@ class MetricsTableSeeder extends Seeder
        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
        culpa qui officia deserunt mollit anim id est laborum.';
       $metric->formula = '1-(A/B)';
-      $metric->subcharacteristic()->associate(29);
+      $metric->subcharacteristic()->associate(30);
       $metric->save();
 
       $metric = new Metric;
@@ -765,7 +765,7 @@ class MetricsTableSeeder extends Seeder
        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
        culpa qui officia deserunt mollit anim id est laborum.';
       $metric->formula = 'A/B';
-      $metric->subcharacteristic()->associate(30);
+      $metric->subcharacteristic()->associate(31);
       $metric->save();
 
       $metric = new Metric;
@@ -778,7 +778,7 @@ class MetricsTableSeeder extends Seeder
        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
        culpa qui officia deserunt mollit anim id est laborum.';
       $metric->formula = 'A/B';
-      $metric->subcharacteristic()->associate(30);
+      $metric->subcharacteristic()->associate(31);
       $metric->save();
 
       $metric = new Metric;
@@ -791,7 +791,7 @@ class MetricsTableSeeder extends Seeder
        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
        culpa qui officia deserunt mollit anim id est laborum.';
       $metric->formula = '1-(A/N)';
-      $metric->subcharacteristic()->associate(31);
+      $metric->subcharacteristic()->associate(32);
       $metric->save();
 
       $metric = new Metric;
@@ -821,7 +821,7 @@ class MetricsTableSeeder extends Seeder
       $metric->save();
 
       $metric = new Metric;
-      $metric->name = 'Failure density against test cases';
+      $metric->name = 'Acces Auditability';
       $metric->description = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit,
        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -834,7 +834,7 @@ class MetricsTableSeeder extends Seeder
       $metric->save();
 
       $metric = new Metric;
-      $metric->name = 'Failure resolution';
+      $metric->name = 'Access Controllability';
       $metric->description = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit,
        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -895,9 +895,10 @@ class MetricsTableSeeder extends Seeder
        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
        culpa qui officia deserunt mollit anim id est laborum.';
       $metric->formula = 'A/B';
-      $metric->subcharacteristic()->associate(34);
+      $metric->subcharacteristic()->associate(33);
       $metric->save();
 
+//FaultTolerance
       $metric = new Metric;
       $metric->name = 'Breakdown Avoidance';
       $metric->description = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit,
@@ -908,7 +909,7 @@ class MetricsTableSeeder extends Seeder
        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
        culpa qui officia deserunt mollit anim id est laborum.';
       $metric->formula = '1-(A/B)';
-      $metric->subcharacteristic()->associate(35);
+      $metric->subcharacteristic()->associate(34);
       $metric->save();
 
       $metric = new Metric;
@@ -921,7 +922,7 @@ class MetricsTableSeeder extends Seeder
        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
        culpa qui officia deserunt mollit anim id est laborum.';
       $metric->formula = 'A/B';
-      $metric->subcharacteristic()->associate(35);
+      $metric->subcharacteristic()->associate(34);
       $metric->save();
 
       $metric = new Metric;
@@ -934,7 +935,7 @@ class MetricsTableSeeder extends Seeder
        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
        culpa qui officia deserunt mollit anim id est laborum.';
       $metric->formula = 'A/B';
-      $metric->subcharacteristic()->associate(35);
+      $metric->subcharacteristic()->associate(34);
       $metric->save();
 
 //Recoverability
@@ -948,7 +949,7 @@ class MetricsTableSeeder extends Seeder
        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
        culpa qui officia deserunt mollit anim id est laborum.';
       $metric->formula = 'A/B';
-      $metric->subcharacteristic()->associate(36);
+      $metric->subcharacteristic()->associate(35);
       $metric->save();
 
 //Reliability
@@ -964,6 +965,8 @@ class MetricsTableSeeder extends Seeder
       $metric->formula = '1-(A/B)';
       $metric->subcharacteristic()->associate(36);
       $metric->save();
+
+      #USABILITY
 //Understandability
       $metric = new Metric;
       $metric->name = 'Completeness of Description';
