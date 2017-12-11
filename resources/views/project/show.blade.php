@@ -2,6 +2,13 @@
 @section('content')
 <h1>{{$project->name}}</h1>
 <br>
+<h5>Puntajes de Atributos de Calidad:</h5>
+@foreach($qualities as $quality)
+    <strong>{{$quality["name"]}}:</strong> {{$quality["score"]}}
+    <br>
+
+@endforeach
+<br>
 <h3>Entregables</h3>
 <br>
 <table>
@@ -24,11 +31,18 @@
         @php
         //dd($qualities)
     @endphp
-
+    <br>
   <script src="/js/Chart.min.js"></script>
-
-     <div style="width:60%">
-        <canvas id="canvas"></canvas>
+  <div style="display:inline;">
+     <div style="display:inline-block;width:49%;padding:0;margin:0;">
+        <canvas id="canvas1"></canvas>
+    </div>
+     <div style="display:inline-block;width:50%">
+        <canvas id="canvas2"></canvas>
+    </div>
+     <div style="display:inline-block;width:50%">
+        <canvas id="canvas3"></canvas>
+    </div>
     </div>
     <script>
         'use strict';
@@ -171,7 +185,7 @@ window.chartColors = {
 }(this));
 
     var color = Chart.helpers.color;
-    var config = {
+    var config1 = {
         type: 'radar',
         data: {
             labels: 
@@ -181,10 +195,10 @@ window.chartColors = {
             @endforeach
             ],
             datasets: [{
-                label: "My First dataset",
-                backgroundColor: color(window.chartColors.red).alpha(0.2).rgbString(),
-                borderColor: window.chartColors.red,
-                pointBackgroundColor: window.chartColors.red,
+                label: '{{$qualities[0]["name"]}}',
+                backgroundColor: color(window.chartColors.blue).alpha(0.2).rgbString(),
+                borderColor: window.chartColors.blue,
+                pointBackgroundColor: window.chartColors.blue,
                 data: [
                     @foreach( $qualities[0]["characteristics"] as $characteristic)
                     {{ $characteristic["score"]*100 }},
@@ -210,8 +224,86 @@ window.chartColors = {
         }
     };
 
+    var config2 = {
+        type: 'radar',
+        data: {
+            labels: 
+            [
+                @foreach( $qualities[1]["characteristics"] as $characteristic) 
+                "{{$characteristic["name"]}}",
+            @endforeach
+            ],
+            datasets: [{
+                label: '{{$qualities[1]["name"]}}',
+                backgroundColor: color(window.chartColors.red).alpha(0.2).rgbString(),
+                borderColor: window.chartColors.red,
+                pointBackgroundColor: window.chartColors.red,
+                data: [
+                    @foreach( $qualities[1]["characteristics"] as $characteristic)
+                    {{ $characteristic["score"]*100 }},
+                    @endforeach
+                ]
+            },
+            ]
+        },
+        options: {
+            legend: {
+                position: 'top',
+            },
+            title: {
+                display: true,
+                text: '{{$qualities[1]["name"]}}'
+            },
+            scale: {
+              ticks: {
+                beginAtZero: true,
+                  max: 100,
+              }
+            }
+        }
+    };
+    var config3 = {
+        type: 'radar',
+        data: {
+            labels: 
+            [
+                @foreach( $qualities[2]["characteristics"] as $characteristic) 
+                "{{$characteristic["name"]}}",
+            @endforeach
+            ],
+            datasets: [{
+                label: '{{$qualities[2]["name"]}}',
+                backgroundColor: color(window.chartColors.green).alpha(0.2).rgbString(),
+                borderColor: window.chartColors.green,
+                pointBackgroundColor: window.chartColors.green,
+                data: [
+                    @foreach( $qualities[2]["characteristics"] as $characteristic)
+                    {{ $characteristic["score"]*100 }},
+                    @endforeach
+                ]
+            },
+            ]
+        },
+        options: {
+            legend: {
+                position: 'top',
+            },
+            title: {
+                display: true,
+                text: '{{$qualities[2]["name"]}}'
+            },
+            scale: {
+              ticks: {
+                beginAtZero: true,
+                  max: 100,
+              }
+            }
+        }
+    };
     window.onload = function() {
-        window.myRadar = new Chart(document.getElementById("canvas"), config);
+        window.myRadar = new Chart(document.getElementById("canvas1"), config1);
+        window.myRadar = new Chart(document.getElementById("canvas2"), config2);
+        window.myRadar = new Chart(document.getElementById("canvas3"), config3);
     };
 
     </script>
