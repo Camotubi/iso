@@ -46,7 +46,7 @@ class DeliverableController extends Controller
         $deliverable -> name = $request->input('name');
         $deliverable -> project()->associate($project);
         $deliverable -> save();
-        return redirect('/dashboard')->with(['success' => 'Entregable creado']);
+        return redirect("/projects/".$project->id)->with(['success' => 'Entregable creado']);
     }
 
     /**

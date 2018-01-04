@@ -7,6 +7,7 @@ use App\Project;
 use App\Measurement;
 use App\Deliverable;
 use App\MetricDeliverable;
+use App\Metric;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -29,10 +30,30 @@ class EvaluationController extends Controller
      * @param  \App\MetricDeliverable  $metricDeliverable
      * @return \Illuminate\Http\Response
      */
-    public function create(Project $project, Deliverable $deliverable, MetricDeliverable $metricDeliverable)
+    public function create(Project $project, Deliverable $deliverable, MetricDeliverable $metricDeliverable, Request $request)
     {
-        //
-        return(view('project.deliverable.metricDeliverable.evaluation.create',['project'=>$project,'deliverable' => $deliverable,'metricDeliverable' => $metricDeliverable]));
+        $metric = Metric::find($metricDeliverable->metric_id);
+        $numVariables = $request->input('numVariables');
+    		if(is_null($numVariables))
+    	  {
+    		$numVariables = 2;
+    	  }
+    		$modVariablesFields = $request->input('modVariablesFields');
+    		if($modVariablesFields == 'p')
+    	  {
+    		$numVariables++;
+    	  }elseif($modVariablesFields == 'm')
+    	  {
+    		$numVariables--;
+    	  }
+        return(view('project.deliverable.metricDeliverable.evaluation.create',
+        [
+          'project'=>$project,'deliverable' => $deliverable,
+          'metricDeliverable' => $metricDeliverable,
+          'metric' => $metric,
+          'numVariables' => $numVariables,
+          'modVariablesFields' => $modVariablesFields
+        ]));
     }
 
     /**
@@ -59,8 +80,9 @@ class EvaluationController extends Controller
 
 
 /*Load array */
-   
-        return redirect('/dashboard');
+
+        return redirect("/projects/".$project->id."/deliverables/".$deliverable->id."/metricDeliverables/".$metricDeliverable->id)
+          ->with(['success' => 'Evaluacion agregada']);
     }
 
     /**

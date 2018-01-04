@@ -2,10 +2,12 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Relations\Pivot;
+use Illuminate\Database\Eloquent\Model;
 
-class MetricDeliverable extends Pivot
+class MetricDeliverable extends Model
 {
+    protected $table = 'metric_deliverable';
+    protected $appends = ['current_value'];
     public function deliverable()
     {
         return $this->belongsTo('App\Deliverable');
@@ -29,7 +31,7 @@ class MetricDeliverable extends Pivot
             $evaluation = $this->evaluations()->orderBy('created_at', 'desc')->first();
             if(empty($evaluation))
             {
-                return "Not set";
+                return 0;
             }
             $measurements = $evaluation->measurements()->get();
             foreach($measurements as  $measurement)
@@ -71,5 +73,11 @@ class MetricDeliverable extends Pivot
             return "error";
         }
 
+    }
+
+    public function getCurrentValueAttribute()
+    {
+            return $this->currentValue();
+    
     }
 }

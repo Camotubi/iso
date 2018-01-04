@@ -14,6 +14,7 @@ class QualityAttributesTableSeeder extends Seeder
     {
       $qualityAttribute = QualityAttribute::create([
         'name' => 'External',
+      
       ]);
 
       $qualityAttribute = QualityAttribute::create([
